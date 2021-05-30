@@ -1,0 +1,18 @@
+
+
+.color{
+   background-color: #3f4643 ;
+}
+
+button{
+    background-color: #1A4341 ;
+    box-shadow: 5px 5px #00000073;
+    color: #F3AC3C;
+    padding: 1rem 2rem;
+ }
+
+.bild-s{
+    width: 25rem;
+    height: 30rem;
+    background-color: grey;
+}

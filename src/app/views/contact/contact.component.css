@@ -1,0 +1,28 @@
+.fab{
+    color: #c78e33;
+    cursor: pointer;
+}
+
+.fa-twitter:hover{
+    color: cyan;
+}
+
+.fa-facebook:hover{
+    color: blue;
+}
+
+.fa-linkedin:hover{
+    color: rgb(97, 97, 97);
+}
+
+button{
+    background-color: #1A4341 ;
+    box-shadow: 5px 5px #00000073;
+    color: #F3AC3C;
+    padding: 1rem 2rem;
+ }
+
+ .color{
+     background-color: #3f4643 ;
+     padding: 5rem;
+ }

@@ -1,0 +1,54 @@
+<div class="color">
+
+
+<div class="d-flex flex-column align-items-center container">
+    <div>
+        <h1 class="text-center">Kontakta mig</h1>
+        <div class="row text-center">
+            <i class="fab fa-5x fa-twitter col"></i>
+            <i class="fab fa-5x fa-facebook col"></i>
+            <i class="fab fa-5x fa-linkedin col"></i>
+        </div>
+    </div>
+    <form class="w-50" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name" class="form-label">Namn</label>
+          <input [class.is-invalid]="primName?.invalid && primName?.touched" type="text" class="form-control" id="name" formControlName="name">
+        </div>
+
+        <div *ngIf="(primName?.invalid && primName?.touched) || primName?.dirty">
+            <small *ngIf="primName?.errors?.required" class="text-danger">var snäll och skriv ditt namn</small>
+          </div>
+    
+        <div>
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <input [class.is-invalid]="primEmail?.invalid && primEmail?.touched" type="email" class="form-control" id="email" formControlName="email">
+          </div>
+
+          <div *ngIf="(primEmail?.invalid && primEmail?.touched) || primEmail?.dirty">
+            <small *ngIf="primEmail?.errors?.required" class="text-danger">du måste skriva din email</small>
+            <small *ngIf="primEmail?.errors?.pattern" class="text-danger">det där är inte en email</small>
+          </div>
+    
+          <div>
+            <label for="topic" class="col-sm-2 col-form-label">Ämne</label>
+            <input [class.is-invalid]="primTopic?.invalid && primTopic?.touched" type="text" class="form-control" id="topic" formControlName="topic">
+          </div>
+
+          <div *ngIf="(primTopic?.invalid && primTopic?.touched) || primTopic?.dirty">
+            <small *ngIf="primTopic?.errors?.required" class="text-danger">var snäll och skriv ett Ämne</small>
+          </div>
+    
+        <div>
+            <label for="message" class="form-label">Medelande</label>
+            <textarea [class.is-invalid]="primMessage?.invalid && primMessage?.touched" class="form-control" id="message" rows="3" formControlName="message"></textarea>
+          </div>
+
+          <div *ngIf="(primMessage?.invalid && primMessage?.touched) || primMessage?.dirty">
+            <small *ngIf="primMessage?.errors?.required" class="text-danger">Du glömde att skriva ditt medelande</small>
+          </div>
+          
+        <button type="submit" [disabled]="!contactForm.valid" class="btn">Skicka</button>
+      </form>
+</div>
+</div>

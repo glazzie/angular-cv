@@ -1,0 +1,37 @@
+.color{
+    background-color: #3f4643 ;
+ }
+ 
+ button{
+     background-color: #1A4341 ;
+     box-shadow: 5px 5px #00000073;
+     color: #F3AC3C;
+     padding: 1rem 2rem;
+  }
+ 
+ .bild-s{
+    width: 25rem;
+    height: 30rem;
+     background-color: grey;
+ }
+
+ .bild-l{
+    width: 17.9rem;
+    height: 15rem;
+    background-color: grey;
+    border-radius: 25px 25px 0 0;
+}
+
+ table, th, td {
+    border: 1px solid white;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
+  }
+
+  .card{
+    background-color: #3f4643 ;
+    border-radius: 25px;
+    margin: 1rem;
+    padding: 0;
+  }
